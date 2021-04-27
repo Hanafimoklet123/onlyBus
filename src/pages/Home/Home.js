@@ -13,7 +13,7 @@ export const Home = () => {
         }}
         title={"Home"}
       ></PageHeader>
-      Ini adalah page Home
+      Ini adalah page Home !!
     </div>
   );
 };
