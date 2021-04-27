@@ -1,7 +1,7 @@
 import React from "react";
-import { PageHeader } from "antd";
+import {PageHeader} from "antd";
 
-export const Home = () => {
+export const Contact = () => {
   return (
     <div>
       <PageHeader
@@ -11,9 +11,9 @@ export const Home = () => {
           height: 40,
           backgroundColor: "transparent",
         }}
-        title={"Home"}
+        title={"Contact"}
       ></PageHeader>
-      Ini adalah page Home
+      Ini Halaman Contact !!!
     </div>
   );
 };
