@@ -1,6 +1,7 @@
 import React from "react";
 import { PageHeader } from "antd";
 import { Slider } from "./Slider";
+import Bgimg from "../../img/backbus.jpeg"
 
 export const Home = () => {
   return (
@@ -12,7 +13,6 @@ export const Home = () => {
           height: 40,
           backgroundColor: "transparent",
         }}
-        title={"Home"}
       ></PageHeader>
       <Slider />
     </div>

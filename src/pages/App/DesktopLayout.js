@@ -4,6 +4,8 @@ import { MenuList } from "./MenuList";
 import { Link } from "react-router-dom";
 import { UserOutlined } from "@ant-design/icons";
 import { AppRoute } from "../../routes/app";
+import Logo from "../../img/onlybus-d.png";
+import Bgimg from "../../img/backbus.jpeg"
 
 const { Text, Paragraph } = Typography;
 const { Header, Content, Sider } = Layout;
@@ -25,8 +27,9 @@ export const DesktopLayout = () => {
     >
       <Sider
         className={"transparent"}
-        width={240}
+        width={200}
         style={{
+          backgroundColor: "#ED6868",
           overflowX: "hidden",
           bottom: 0,
           justifyContent: "flex-start",
@@ -39,29 +42,21 @@ export const DesktopLayout = () => {
       >
         <div
           style={{
-            paddingLeft: 20,
-            marginBottom: 40,
+            paddingLeft: 15,
+            marginBottom: 10,
           }}
         >
-          <Paragraph
-            style={{
-              margin: 0,
-              padding: 0,
-              fontSize: 20,
-              marginLeft: 5,
-              fontWeight: 600,
-              color: "#413d3e",
-            }}
-          >
-            OnlyBus
-          </Paragraph>
+            <img src={Logo} style={{
+              width: 130,
+              height: 130,
+            }}/>
         </div>
         <MenuList closeLeftDrawer={() => {}} />
       </Sider>
 
       <Layout
         style={{
-          paddingLeft: 240,
+          paddingLeft: 400,
         }}
       >
         <Header

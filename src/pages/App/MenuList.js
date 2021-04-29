@@ -16,11 +16,11 @@ export const MenuList = observer((props) => {
   return (
     <Menu
       defaultOpenKeys={["sub4"]}
-      theme="light"
+      theme="dark"
       style={{
         backgroundColor: "transparent",
         borderRightWidth: 0,
-        fontWeight: 400,
+        fontWeight: 500,
         paddingLeft: 0,
       }}
       onClick={({ keyPath, item }) => {
@@ -44,10 +44,10 @@ export const MenuList = observer((props) => {
           <span>About</span>
         </Link>
       </Menu.Item>
-      <Menu.Item key="contact">
+      <Menu.Item key="ticket">
         <Link to={"/app/tiket"}>
           <CalendarOutlined />
-          <span>Pesan</span>
+          <span>Locket</span>
         </Link>
       </Menu.Item>
       <Menu.Item key="contact">

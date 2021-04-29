@@ -1,14 +1,14 @@
 import { Carousel } from "antd";
-import slide1 from "../../img/bis-pantura.jpg";
-import slide2 from "../../img/bis.jpg";
-import slide3 from "../../img/bismania.jpg";
+import slide1 from "../../img/busjauh.jpg";
+import slide2 from "../../img/alone-road-sun.jpg";
+import slide3 from "../../img/terminal-bus.jpg";
 
 export const Slider = () => {
   const sliders = [
     {
       key: 1,
       image: slide1,
-      text: "“Bis pantura memiliki ciri khas yaitu blablablablabla”",
+      text: "Selamat Datang!",
       subtext: "-John Paul Friedrich Richter-",
       active: true,
     },
@@ -18,22 +18,22 @@ export const Slider = () => {
       text: "“Bis pantura memiliki ciri khas yaitu blablablablabla”",
       subtext: "-John Paul Friedrich Richter-",
     },
-    {
-      key: 3,
-      image: slide3,
-      text: "“Bis pantura memiliki ciri khas yaitu blablablablabla”",
-      subtext: "-John Paul Friedrich Richter-",
-    },
+    // {
+    //   key: 3,
+    //   image: slide3,
+    //   text: "“Bis pantura memiliki ciri khas yaitu blablablablabla”",
+    //   subtext: "-John Paul Friedrich Richter-",
+    // },
   ];
 
   return (
     <div className="row">
-      <div className="col-md-12">
+      <div className="col-md-9">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div className="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="1" aria-label="Slide-1"></button>
-            <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            {/* <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="2" aria-label="Slide 3"></button> */}
           </div>
           <div className="carousel-inner">
             {sliders.map((slide) => {
@@ -41,7 +41,7 @@ export const Slider = () => {
               return (
                 <div className={"carousel-item " + isDataActive} key={slide.key}>
                   <img src={slide.image} class="d-block w-100" alt="..."></img>
-                  <div className="carousel-caption d-md-block bg-danger">
+                  <div className="carousel-caption d-md-block bg-warning">
                     <h5>{slide.text}</h5>
                     <p>{slide.subtext}</p>
                   </div>
