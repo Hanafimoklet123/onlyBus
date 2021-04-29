@@ -1,5 +1,6 @@
 import React from "react";
 import { PageHeader } from "antd";
+import { Slider } from "./Slider";
 
 export const Home = () => {
   return (
@@ -13,7 +14,7 @@ export const Home = () => {
         }}
         title={"Home"}
       ></PageHeader>
-      Ini adalah page Home !!
+      <Slider />
     </div>
   );
 };

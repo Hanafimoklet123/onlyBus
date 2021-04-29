@@ -1,7 +1,7 @@
 import React from "react";
 import { PageHeader } from "antd";
 
-export const About = () => {
+export const Tiket = () => {
   return (
     <div>
       <PageHeader
@@ -11,7 +11,7 @@ export const About = () => {
           height: 40,
           backgroundColor: "transparent",
         }}
-        title={"About"}
+        title={"Tiket"}
       ></PageHeader>
       <div class="accordion" id="accordionExample">
         <div class="accordion-item">

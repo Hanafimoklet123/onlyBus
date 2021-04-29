@@ -45,6 +45,12 @@ export const MenuList = observer((props) => {
         </Link>
       </Menu.Item>
       <Menu.Item key="contact">
+        <Link to={"/app/tiket"}>
+          <CalendarOutlined />
+          <span>Pesan</span>
+        </Link>
+      </Menu.Item>
+      <Menu.Item key="contact">
         <Link to={"/app/contact"}>
           <CalendarOutlined />
           <span>Contact</span>
