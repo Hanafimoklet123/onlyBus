@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { UserOutlined } from "@ant-design/icons";
 import { AppRoute } from "../../routes/app";
 import Logo from "../../img/onlybus-d.png";
-import Bgimg from "../../img/backbus.jpeg"
+import Bgimg from "../../img/backbus.jpeg";
 
 const { Text, Paragraph } = Typography;
 const { Header, Content, Sider } = Layout;
@@ -46,17 +46,20 @@ export const DesktopLayout = () => {
             marginBottom: 10,
           }}
         >
-            <img src={Logo} style={{
-              width: 130,
-              height: 130,
-            }}/>
+          <img
+            src={Logo}
+            style={{
+              width: 100,
+              height: 100,
+            }}
+          />
         </div>
         <MenuList closeLeftDrawer={() => {}} />
       </Sider>
 
       <Layout
         style={{
-          paddingLeft: 400,
+          paddingLeft: 300,
         }}
       >
         <Header
