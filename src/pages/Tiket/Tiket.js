@@ -1,7 +1,33 @@
 import React from "react";
-import { PageHeader } from "antd";
+import ReactDOM from "react-dom";
+import "antd/dist/antd.css";
+import "./Tiket.css";
+import { PageHeader, Form, Input, InputNumber, Button, Card } from "antd";
+import { values } from "mobx";
+const layout = {
+  labelCol: {
+    span: 8,
+  },
+  wrapperCol: {
+    span: 16,
+  },
+};
+
+const validateMessages = {
+  required: "${label} is required!",
+  types: {
+    email: "${label} is not a valid email!",
+    number: "${label} is not a valid number!",
+  },
+  number: {
+    range: "${label} must be between ${min} and ${max}",
+  },
+};
 
 export const Tiket = () => {
+  const onFinish = (values) => {
+    console.log(values);
+  };
   return (
     <div>
       <PageHeader
@@ -11,52 +37,60 @@ export const Tiket = () => {
           height: 40,
           backgroundColor: "transparent",
         }}
-        title={"Tiket"}
       ></PageHeader>
-      <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              About Me 1
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well
-              as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              About Me 2
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as
-              well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>
-              , though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              About Me 3
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well
-              as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
+      <div className="site-card-border-less-wrapper">
+        <Card title="Card title" bordered={false} style={{ width: 600 }}>
+          <Form {...layout} name="nest-messages" onFinish={onFinish} validateMessages={validateMessages}>
+            <Form.Item
+              name={["user", "name"]}
+              label="Name"
+              rules={[
+                {
+                  required: true,
+                },
+              ]}
+            >
+              <Input />
+            </Form.Item>
+            <Form.Item
+              name={["user", "email"]}
+              label="Email"
+              rules={[
+                {
+                  type: "email",
+                },
+              ]}
+            >
+              <Input />
+            </Form.Item>
+            <Form.Item
+              name={["user", "age"]}
+              label="Age"
+              rules={[
+                {
+                  type: "number",
+                  min: 0,
+                  max: 99,
+                },
+              ]}
+            >
+              <InputNumber />
+            </Form.Item>
+            <Form.Item name={["user", "website"]} label="Website">
+              <Input />
+            </Form.Item>
+            <Form.Item name={["user", "introduction"]} label="Introduction">
+              <Input.TextArea />
+            </Form.Item>
+            <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
+              <Button type="primary" htmlType="submit">
+                Checkout
+              </Button>
+            </Form.Item>
+          </Form>
+        </Card>
       </div>
+      ,
     </div>
   );
 };
