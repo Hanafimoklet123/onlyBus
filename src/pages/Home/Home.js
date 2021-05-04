@@ -2,6 +2,7 @@ import React from "react";
 import { PageHeader } from "antd";
 import { Slider } from "./Slider";
 import Bgimg from "../../img/backbus.jpeg"
+import HomePage from "./HomePage";
 
 export const Home = () => {
   return (
@@ -15,6 +16,7 @@ export const Home = () => {
         }}
       ></PageHeader>
       <Slider />
+      <HomePage />
     </div>
   );
 };
