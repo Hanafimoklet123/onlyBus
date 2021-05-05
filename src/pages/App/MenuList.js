@@ -47,7 +47,7 @@ export const MenuList = observer((props) => {
       <Menu.Item key="ticket">
         <Link to={"/app/tiket"}>
           <FileAddOutlined />
-          <span>Locket</span>
+          <span>Tiket</span>
         </Link>
       </Menu.Item>
       <Menu.Item key="contact">

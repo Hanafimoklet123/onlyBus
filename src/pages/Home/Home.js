@@ -1,8 +1,7 @@
 import React from "react";
 import { PageHeader } from "antd";
 import { Slider } from "./Slider";
-import Bgimg from "../../img/backbus.jpeg"
-import HomePage from "./HomePage";
+import HomePage from "./HomePage/HomePage";
 
 export const Home = () => {
   return (

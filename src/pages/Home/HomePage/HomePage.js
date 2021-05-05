@@ -1,6 +1,6 @@
 import React from "react";
-import bis1 from "../../img/europeroad.jpg";
-import bis2 from "../../img/bis-pantura.jpg";
+import bis1 from "../../../img/europeroad.jpg";
+import bis2 from "../../../img/bis-pantura.jpg";
 import "./HomePage.css";
 
 export const HomePage = () => {
