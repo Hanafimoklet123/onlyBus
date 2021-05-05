@@ -53,14 +53,14 @@ export const Contact = () => {
           backgroundColor: "transparent",
         }}
       ></PageHeader>
-      <div className="site-card-border-less-wrapper" style={{ marginLeft: "90px"}}>
-        <Card bordered={false} style={{ width: 800 }}>
+      <div className="site-card-border-less-wrapper" style={{ marginleft: "90px" }}>
+        <Card bordered={false} style={{ width: "100%" }}>
           <Form {...layout} name="nest-messages" onFinish={onFinish} validateMessages={validateMessages}>
             <Row>
               <Col span={10}>
                 <Form.Item
                   // name={["user", "name"]}
-                  label="Your Name :"
+                  label="Name :"
                   rules={[{}]}
                 >
                   <Input style={{ marginLeft: " 20px", width: "70%" }} />
@@ -74,6 +74,8 @@ export const Contact = () => {
                   ><Input style={{ marginLeft: " 20px", width: "70%" }} />
                   </Form.Item>
                 </Col>
+              </Row>
+                <Row>
                 <Col span={10}>
                   <Form.Item
                     // name={[ "address" ]}
@@ -81,10 +83,10 @@ export const Contact = () => {
                     rules={[{}]}
                 ><Input style={{ marginLeft: " 20px", width: "70%" }} />
                 </Form.Item>
-              </Col>
+                </Col>
               <Col span={10}>
                   <Form.Item
-                    // name={[ "address" ]}
+                    name={["user", "jumlah"]}
                     label="number :"
                     rules={[
                       {
@@ -93,16 +95,18 @@ export const Contact = () => {
                         max: 99,
                       },
                     ]}
-                ><Input style={{ marginLeft: " 20px", width: "70%" }} />
+                ><Input style={{ marginLeft: "20px", width: "70%" }} />
                 </Form.Item>
               </Col>
-              <Col span={10}>
+              </Row>
+              <Row>
+              <Col span={22}>
                   <Form.Item
                     // name={[ "address" ]}
-                    label="Kota Tujuan :" 
+                    label="Tell Us Your Concern :" 
                     style={{ marginLeft: " 20px" }}
                     rules={[{}]}
-                ><Input style={{ marginLeft: " 20px", width: "70%" }} />
+                ><Input.TextArea style={{ marginLeft: " 40px", width: "70%" }} />
                 </Form.Item>
               </Col>
             </Row>
