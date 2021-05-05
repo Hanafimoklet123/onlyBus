@@ -32,7 +32,7 @@ export const Contact = () => {
   return (
     <div>
       <div className="row mt-5">
-        <div className="col-md-6">
+        <div className="col-md-7">
           <h3 className="mb-5">
             <span className="bg-warning text-white p-2">Contact Us</span>
           </h3>

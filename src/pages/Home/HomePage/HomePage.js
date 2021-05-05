@@ -1,6 +1,7 @@
 import React from "react";
-import bis1 from "../../../img/europeroad.jpg";
-import bis2 from "../../../img/bis-pantura.jpg";
+import bis1 from "../../../img/yellowBus.jpg";
+import bis2 from "../../../img/heMaskedBus.jpg";
+import bis3 from "../../../img/weMasked.jpg"
 import "./HomePage.css";
 
 export const HomePage = () => {
@@ -19,8 +20,8 @@ export const HomePage = () => {
     <div>
       <p className="tag"> Tentang Tentang</p>
       <div className="row mt-5">
-        <div className="col-md-6">
-          <h3 className="mb-5">
+        <div className="col-md-7">
+          <h3 className="mb-5" style={{ marginTop: "80px"}}>
             <span className="bg-warning text-white p-2">Section Title</span>
           </h3>
           <p>
@@ -47,8 +48,8 @@ export const HomePage = () => {
         </div>
       </div>
       <div className="row mt-5">
-        <div className="col-md-6">
-          <h3 className="mb-5">
+        <div className="col-md-7">
+          <h3 className="mb-5" style={{ marginTop: "80px"}}>
             <span className="bg-warning text-white p-2">Section Title</span>
           </h3>
           <p>
@@ -57,7 +58,8 @@ export const HomePage = () => {
           </p>
         </div>
         <div className="col-sm-5">
-          <img className="img-fluid" src={bis1} alt="" />
+          <img className="img-fluid" src={bis3} alt="" />
+          <div className="row mb-5"></div>
         </div>
       </div>
     </div>
