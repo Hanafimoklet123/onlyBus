@@ -1,8 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 import ReactDOM from "react-dom";
 import "antd/dist/antd.css";
 import "./Contact.css";
-import { PageHeader, Form, Input, InputNumber, Button, Card, DatePicker, Row, Col } from "antd";
+import { PageHeader, Form, Input, InputNumber, Modal, Button, Card, DatePicker, Row, Col } from "antd";
 import { values } from "mobx";
 import Img from "../../img/imgContact.png";
 const layout = {
@@ -26,8 +26,21 @@ const validateMessages = {
 };
 
 export const Contact = () => {
+
   const onFinish = (values) => {
     console.log(values);
+  };
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  
+  const showModal = () => {
+    setIsModalVisible(true);
+  };
+
+  const handleOk = () => {
+    setIsModalVisible(false);
+  };
+  const handleCancel = () => {
+    setIsModalVisible(false);
   };
   return (
     <div>
@@ -57,68 +70,89 @@ export const Contact = () => {
         <Card bordered={false} style={{ width: "100%" }}>
           <Form {...layout} name="nest-messages" onFinish={onFinish} validateMessages={validateMessages}>
             <Row>
-              <Col span={10}>
+              <Col span={12}>
                 <Form.Item
-                  // name={["user", "name"]}
-                  label="Name :"
-                  rules={[{}]}
+                  name={["user", "name"]}
+                  label="Name"
+                  rules={[
+                    {
+                      required: true
+                    },
+                  ]}
                 >
-                  <Input style={{ marginLeft: " 20px", width: "70%" }} />
+                  <Input placeholder="Enter Your Name" style={{ marginLeft: " 20px", width: "70%" }} />
                 </Form.Item>
               </Col>
-              <Col span={10}>
+              <Col span={12}>
                 <Form.Item
-                  // name={[ "address" ]}
-                  label="Kota Tujuan :"
-                  rules={[{}]}
-                  ><Input style={{ marginLeft: " 20px", width: "70%" }} />
+                  name={['user', 'email']}
+                  label="Email Address"
+                  rules={[
+                    { 
+                      type: 'email' 
+                    },
+                    {
+                      required: true
+                    }
+                  ]}
+                  ><Input placeholder="Enter Your Email" style={{ marginLeft: " 20px", width: "70%" }} />
                   </Form.Item>
                 </Col>
               </Row>
                 <Row>
-                <Col span={10}>
+                <Col span={12}>
                   <Form.Item
                     // name={[ "address" ]}
-                    label="Kota Tujuan :"
-                    rules={[{}]}
-                ><Input style={{ marginLeft: " 20px", width: "70%" }} />
+                    label="Phone Number"
+                    rules={{}}
+                ><Input placeholder="(optional) 08..." style={{ marginLeft: " 20px", width: "70%" }} />
                 </Form.Item>
                 </Col>
-              <Col span={10}>
+              <Col span={12}>
                   <Form.Item
                     name={["user", "jumlah"]}
-                    label="number :"
+                    label="Ticket ID :"
                     rules={[
                       {
-                        type: "number",
-                        min: 0,
-                        max: 99,
-                      },
+                        type: 'number'
+                      }
                     ]}
-                ><Input style={{ marginLeft: "20px", width: "70%" }} />
+                ><Input placeholder="(optional)" style={{ marginLeft: "20px", width: "70%" }} />
                 </Form.Item>
               </Col>
               </Row>
               <Row>
               <Col span={22}>
                   <Form.Item
-                    // name={[ "address" ]}
-                    label="Tell Us Your Concern :" 
+                    name={[ "messages" ]}
+                    label="messages" 
                     style={{ marginLeft: " 20px" }}
-                    rules={[{}]}
-                ><Input.TextArea style={{ marginLeft: " 40px", width: "70%" }} />
+                    rules={[
+                      {
+                        required: true
+                      }
+                    ]}
+                ><Input.TextArea placeholder="Tell Us Your Concern" style={{ marginLeft: " 40px", width: "70%" }} />
                 </Form.Item>
               </Col>
             </Row>
             <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 9 }}>
-              <Button type="primary" htmlType="submit">
+              <Button type="primary" onClick={showModal} htmlType={"submit"}>
                 Submit
               </Button>
+              <Modal 
+              title="You sure? if not you can return to check and fix" 
+              visible={isModalVisible} 
+              onOk={handleOk} 
+              onCancel={handleCancel}>
+                <p>some content</p>
+              </Modal>
             </Form.Item>
           </Form>
         </Card>
       </div>
-      ,
     </div>
   );
-};
+  }
+  
+

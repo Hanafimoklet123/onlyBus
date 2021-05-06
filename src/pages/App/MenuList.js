@@ -53,7 +53,7 @@ export const MenuList = observer((props) => {
       <Menu.Item key="contact">
         <Link to={"/app/contact"}>
           <ContactsOutlined />
-          <span>Contact</span>
+          <span>Contact Us</span>
         </Link>
       </Menu.Item>
       <Menu.Divider style={{ background: "transparent", paddingTop: 15 }} />
