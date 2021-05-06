@@ -72,6 +72,7 @@ export const Contact = () => {
             <Row>
               <Col span={12}>
                 <Form.Item
+<<<<<<< HEAD
                   name={["user", "name"]}
                   label="Name"
                   rules={[
@@ -79,6 +80,11 @@ export const Contact = () => {
                       required: true
                     },
                   ]}
+=======
+                  // name={["user", "name"]}
+                  label="Name :"
+                  rules={[{}]}
+>>>>>>> a3b6e113676f7882ba117c46f7310f3480dc7a13
                 >
                   <Input placeholder="Enter Your Name" style={{ marginLeft: " 20px", width: "70%" }} />
                 </Form.Item>
@@ -100,7 +106,11 @@ export const Contact = () => {
                 </Col>
               </Row>
                 <Row>
+<<<<<<< HEAD
                 <Col span={12}>
+=======
+                <Col span={10}>
+>>>>>>> a3b6e113676f7882ba117c46f7310f3480dc7a13
                   <Form.Item
                     // name={[ "address" ]}
                     label="Phone Number"
@@ -108,22 +118,34 @@ export const Contact = () => {
                 ><Input placeholder="(optional) 08..." style={{ marginLeft: " 20px", width: "70%" }} />
                 </Form.Item>
                 </Col>
+<<<<<<< HEAD
               <Col span={12}>
                   <Form.Item
                     name={["user", "jumlah"]}
                     label="Ticket ID :"
+=======
+              <Col span={10}>
+                  <Form.Item
+                    name={["user", "jumlah"]}
+                    label="number :"
+>>>>>>> a3b6e113676f7882ba117c46f7310f3480dc7a13
                     rules={[
                       {
                         type: 'number'
                       }
                     ]}
+<<<<<<< HEAD
                 ><Input placeholder="(optional)" style={{ marginLeft: "20px", width: "70%" }} />
+=======
+                ><Input style={{ marginLeft: "20px", width: "70%" }} />
+>>>>>>> a3b6e113676f7882ba117c46f7310f3480dc7a13
                 </Form.Item>
               </Col>
               </Row>
               <Row>
               <Col span={22}>
                   <Form.Item
+<<<<<<< HEAD
                     name={[ "messages" ]}
                     label="messages" 
                     style={{ marginLeft: " 20px" }}
@@ -133,6 +155,13 @@ export const Contact = () => {
                       }
                     ]}
                 ><Input.TextArea placeholder="Tell Us Your Concern" style={{ marginLeft: " 40px", width: "70%" }} />
+=======
+                    // name={[ "address" ]}
+                    label="Tell Us Your Concern :" 
+                    style={{ marginLeft: " 20px" }}
+                    rules={[{}]}
+                ><Input.TextArea style={{ marginLeft: " 40px", width: "70%" }} />
+>>>>>>> a3b6e113676f7882ba117c46f7310f3480dc7a13
                 </Form.Item>
               </Col>
             </Row>
