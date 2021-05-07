@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import {Main} from "./Main";
-import { SiderDemo } from './pages/App/DesktopLayout';
+import { DesktopLayout, SiderDemo } from './pages/App/DesktopLayout';
 
 ReactDOM.render(
   <React.StrictMode>

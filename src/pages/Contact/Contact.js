@@ -53,7 +53,7 @@ export const Contact = () => {
           backgroundColor: "transparent",
         }}
       ></PageHeader>
-      <div className="site-card-border-less-wrapper" style={{ marginLeft: "90px"}}>
+      <div className="site-card-border-less-wrapper" style={{ marginLeft: "90px" }}>
         <Card bordered={false} style={{ width: 800 }}>
           <Form {...layout} name="nest-messages" onFinish={onFinish} validateMessages={validateMessages}>
             <Row>
@@ -71,38 +71,42 @@ export const Contact = () => {
                   // name={[ "address" ]}
                   label="Kota Tujuan :"
                   rules={[{}]}
-                  ><Input style={{ marginLeft: " 20px", width: "70%" }} />
-                  </Form.Item>
-                </Col>
-                <Col span={10}>
-                  <Form.Item
-                    // name={[ "address" ]}
-                    label="Kota Tujuan :"
-                    rules={[{}]}
-                ><Input style={{ marginLeft: " 20px", width: "70%" }} />
+                >
+                  <Input style={{ marginLeft: " 20px", width: "70%" }} />
                 </Form.Item>
               </Col>
               <Col span={10}>
-                  <Form.Item
-                    // name={[ "address" ]}
-                    label="number :"
-                    rules={[
-                      {
-                        type: "number",
-                        min: 0,
-                        max: 99,
-                      },
-                    ]}
-                ><Input style={{ marginLeft: " 20px", width: "70%" }} />
+                <Form.Item
+                  // name={[ "address" ]}
+                  label="Kota Tujuan :"
+                  rules={[{}]}
+                >
+                  <Input style={{ marginLeft: " 20px", width: "70%" }} />
                 </Form.Item>
               </Col>
               <Col span={10}>
-                  <Form.Item
-                    // name={[ "address" ]}
-                    label="Kota Tujuan :" 
-                    style={{ marginLeft: " 20px" }}
-                    rules={[{}]}
-                ><Input style={{ marginLeft: " 20px", width: "70%" }} />
+                <Form.Item
+                  // name={[ "address" ]}
+                  label="number :"
+                  rules={[
+                    {
+                      type: "number",
+                      min: 0,
+                      max: 99,
+                    },
+                  ]}
+                >
+                  <Input style={{ marginLeft: " 20px", width: "70%" }} />
+                </Form.Item>
+              </Col>
+              <Col span={10}>
+                <Form.Item
+                  // name={[ "address" ]}
+                  label="tell us your concern :"
+                  style={{ marginLeft: " 20px" }}
+                  rules={[{}]}
+                >
+                  <Input style={{ marginLeft: " 80px", width: "70%" }} />
                 </Form.Item>
               </Col>
             </Row>
