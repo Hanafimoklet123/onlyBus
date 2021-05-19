@@ -141,7 +141,7 @@ export const Contact = () => {
                 Submit
               </Button>
               <Modal 
-              title="You sure? if not you can return to check and fix" 
+              title="You sure?" 
               visible={isModalVisible} 
               onOk={handleOk} 
               onCancel={handleCancel}>
