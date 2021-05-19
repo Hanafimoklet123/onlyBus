@@ -143,15 +143,11 @@ export const Contact = () => {
               <Button type="primary" onClick={showModal} htmlType={"submit"}>
                 Submit
               </Button>
-<<<<<<< HEAD
               <Modal 
               title="You sure?" 
               visible={isModalVisible} 
               onOk={handleOk} 
               onCancel={handleCancel}>
-=======
-              <Modal title="You sure? if not you can return to check and fix" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
->>>>>>> da8d0521ca7f46b9832a31972534459e61e334bf
                 <p>some content</p>
               </Modal>
             </Form.Item>
