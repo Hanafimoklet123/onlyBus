@@ -4,7 +4,6 @@ import { PublicRoute } from "../component/PublicRoute";
 import { Login } from "../pages/Login/Login";
 import { App } from "../pages/App/App";
 import { Home } from "../pages/Home/Home";
-import { About } from "../pages/About/About";
 import { Contact } from "../pages/Contact/Contact";
 import { Tiket } from "../pages/Tiket/Tiket";
 
@@ -13,9 +12,6 @@ export const AppRoute = () => {
     <Switch>
       <Route path={"/app/home"}>
         <Home />
-      </Route>
-      <Route path={"/app/about"}>
-        <About />
       </Route>
       <Route path={"/app/tiket"}>
         <Tiket />

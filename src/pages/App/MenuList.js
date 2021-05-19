@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Menu } from "antd";
+import { Menu, Layout } from "antd";
 import { Link } from "react-router-dom";
 import { CalendarOutlined, ContactsOutlined, FileAddOutlined, HomeOutlined } from "@ant-design/icons";
+import { MenuUnfoldOutlined, MenuFoldOutlined, UserOutlined, VideoCameraOutlined, UploadOutlined } from "@ant-design/icons";
 import { observer } from "mobx-react-lite";
 import { useStore } from "../../utils/useStore";
 
 const { SubMenu } = Menu;
+const { Header, Sider, Content } = Layout;
 
 export const MenuList = observer((props) => {
   const store = useStore();
@@ -38,12 +40,6 @@ export const MenuList = observer((props) => {
           <span>Home</span>
         </Link>
       </Menu.Item>
-      <Menu.Item key="about">
-        <Link to={"/app/about"}>
-          <CalendarOutlined />
-          <span>About</span>
-        </Link>
-      </Menu.Item>
       <Menu.Item key="ticket">
         <Link to={"/app/tiket"}>
           <FileAddOutlined />
@@ -58,5 +54,40 @@ export const MenuList = observer((props) => {
       </Menu.Item>
       <Menu.Divider style={{ background: "transparent", paddingTop: 15 }} />
     </Menu>
+
+    // <Layout>
+    //   <Sider trigger={null} collapsible collapsed={}>
+    //     <div className="logo" />
+    //     <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
+    //       <Menu.Item key="1" icon={<UserOutlined />}>
+    //         nav 1
+    //       </Menu.Item>
+    //       <Menu.Item key="2" icon={<VideoCameraOutlined />}>
+    //         nav 2
+    //       </Menu.Item>
+    //       <Menu.Item key="3" icon={<UploadOutlined />}>
+    //         nav 3
+    //       </Menu.Item>
+    //     </Menu>
+    //   </Sider>
+    //   <Layout className="site-layout">
+    //     <Header className="site-layout-background" style={{ padding: 0 }}>
+    //       {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
+    //         className: "trigger",
+    //         onClick: this.toggle,
+    //       })}
+    //     </Header>
+    //     <Content
+    //       className="site-layout-background"
+    //       style={{
+    //         margin: "24px 16px",
+    //         padding: 24,
+    //         minHeight: 280,
+    //       }}
+    //     >
+    //       Content
+    //     </Content>
+    //   </Layout>
+    // </Layout>
   );
 });
