@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "antd/dist/antd.css";
 import "./Contact.css";
@@ -26,12 +26,11 @@ const validateMessages = {
 };
 
 export const Contact = () => {
-
   const onFinish = (values) => {
     console.log(values);
   };
   const [isModalVisible, setIsModalVisible] = useState(false);
-  
+
   const showModal = () => {
     setIsModalVisible(true);
   };
@@ -76,7 +75,7 @@ export const Contact = () => {
                   label="Name"
                   rules={[
                     {
-                      required: true
+                      required: true,
                     },
                   ]}
                 >
@@ -85,54 +84,58 @@ export const Contact = () => {
               </Col>
               <Col span={12}>
                 <Form.Item
-                  name={['user', 'email']}
+                  name={["user", "email"]}
                   label="Email Address"
                   rules={[
-                    { 
-                      type: 'email' 
+                    {
+                      type: "email",
                     },
                     {
-                      required: true
-                    }
+                      required: true,
+                    },
                   ]}
-                  ><Input placeholder="Enter Your Email" style={{ marginLeft: " 20px", width: "70%" }} />
-                  </Form.Item>
-                </Col>
-              </Row>
-                <Row>
-                <Col span={12}>
-                  <Form.Item
-                    // name={[ "address" ]}
-                    label="Phone Number"
-                    rules={{}}
-                ><Input placeholder="(optional) 08..." style={{ marginLeft: " 20px", width: "70%" }} />
-                </Form.Item>
-                </Col>
-              <Col span={12}>
-                  <Form.Item
-                    name={["user", "jumlah"]}
-                    label="Ticket ID :"
-                    rules={[
-                      {
-                        type: 'number'
-                      }
-                    ]}
-                ><Input placeholder="(optional)" style={{ marginLeft: "20px", width: "70%" }} />
+                >
+                  <Input placeholder="Enter Your Email" style={{ marginLeft: " 20px", width: "70%" }} />
                 </Form.Item>
               </Col>
-              </Row>
-              <Row>
+            </Row>
+            <Row>
+              <Col span={12}>
+                <Form.Item
+                  // name={[ "address" ]}
+                  label="Phone Number"
+                  rules={{}}
+                >
+                  <Input placeholder="(optional) 08..." style={{ marginLeft: " 20px", width: "70%" }} />
+                </Form.Item>
+              </Col>
+              <Col span={12}>
+                <Form.Item
+                  name={["user", "jumlah"]}
+                  label="Ticket ID :"
+                  rules={[
+                    {
+                      type: "number",
+                    },
+                  ]}
+                >
+                  <Input placeholder="(optional)" style={{ marginLeft: "20px", width: "70%" }} />
+                </Form.Item>
+              </Col>
+            </Row>
+            <Row>
               <Col span={22}>
-                  <Form.Item
-                    name={[ "messages" ]}
-                    label="messages" 
-                    style={{ marginLeft: " 20px" }}
-                    rules={[
-                      {
-                        required: true
-                      }
-                    ]}
-                ><Input.TextArea placeholder="Tell Us Your Concern" style={{ marginLeft: " 40px", width: "70%" }} />
+                <Form.Item
+                  name={["messages"]}
+                  label="messages"
+                  style={{ marginLeft: " 20px" }}
+                  rules={[
+                    {
+                      required: true,
+                    },
+                  ]}
+                >
+                  <Input.TextArea placeholder="Tell Us Your Concern" style={{ marginLeft: " 40px", width: "70%" }} />
                 </Form.Item>
               </Col>
             </Row>
@@ -140,11 +143,15 @@ export const Contact = () => {
               <Button type="primary" onClick={showModal} htmlType={"submit"}>
                 Submit
               </Button>
+<<<<<<< HEAD
               <Modal 
               title="You sure?" 
               visible={isModalVisible} 
               onOk={handleOk} 
               onCancel={handleCancel}>
+=======
+              <Modal title="You sure? if not you can return to check and fix" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+>>>>>>> da8d0521ca7f46b9832a31972534459e61e334bf
                 <p>some content</p>
               </Modal>
             </Form.Item>
@@ -153,6 +160,4 @@ export const Contact = () => {
       </div>
     </div>
   );
-  }
-  
-
+};
